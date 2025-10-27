@@ -8,39 +8,43 @@
     <script src="./script.js" defer></script>
   </head>
   <body onload="renderImgOnload()">
-    <header class="main-header">
+    <header class="MainHeader">
       <img
-        class="logo-img"
+        class="LogoImg"
         src="./img/Fotogram_Logo.svg"
         alt="Logo of the website, depicting a colorful flower and the name"
       />
     </header>
     <main>
-      <section>
+      <section class="SectionH1">
         <h1>Your personal photo album</h1>
       </section>
 
-      <section class="gallery-section" id="imgContainer"></section>
+      <section class="GallerySection" id="imgContainer"></section>
 
       <dialog id="dialog">
-        <header class="dialogHeader">
+        <header class="DialogHeader">
           <div id="dialogHeader"></div>
-          <button onclick="closeDialog()">
+          <button class="DialogBtns" onclick="closeDialog()">
             <img src="./img/closebtn.png" alt="x Button" />
           </button>
         </header>
         <div></div>
-        <footer>
-          <button><img src="./img/arrowleft.png" alt="" /></button>
+        <footer class="DialogFooter">
+          <button class="DialogBtns">
+            <img src="./img/arrowleft.png" alt="" />
+          </button>
           <div><p id="dialogImgCounter"></p></div>
-          <button><img src="./img/arrowright.png" alt="" /></button>
+          <button class="DialogBtns">
+            <img src="./img/arrowright.png" alt="" />
+          </button>
         </footer>
       </dialog>
     </main>
 
-    <footer class="main-footer">
+    <footer class="MainFooter">
       <img
-        class="logo-img"
+        class="LogoImg"
         src="./img/Fotogram_Logo.svg"
         alt="Logo of the website, depicting a flower and the name"
       />

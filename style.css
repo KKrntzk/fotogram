@@ -5,57 +5,83 @@
   color: white;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+html {
+  scroll-behavior: smooth;
 }
 
-.main-header {
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100dvw;
+  background-color: #05171e;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainHeader {
   height: 120px;
   background-color: #082029;
   display: flex;
   align-items: center;
 }
 
-.logo-img {
+.LogoImg {
   height: 80px;
   width: 300px;
   padding-left: 63px;
 }
-main {
-  background-color: #05171e;
+
+.SectionH1 {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  font-size: 40px;
+}
+
+.GallerySection {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.gallery-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-styling {
+.ImgStyling {
   border-radius: 25px;
   margin: 16px;
 }
 
-.img-styling:hover {
+.ImgStyling:hover {
   cursor: pointer;
 }
 
-.main-footer {
+.MainFooter {
   height: 120px;
   background-color: #082029;
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.dialogHeader {
+.DialogHeader {
   height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.DialogFooter {
+  display: flex;
+}
+
+.DialogBtns {
+  border: none;
+}
+.DialogBtns:hover {
+  cursor: pointer;
 }
