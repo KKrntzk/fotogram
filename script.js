@@ -29,3 +29,8 @@ function openDialog() {
 function closeDialog() {
   DIALOG_REF.close();
 }
+
+const DIALOG_IMG_BIG_REF = document.getElementById("DialogRenderedBigImg");
+for (let i = 0; i < GALLERY.length; i++) {
+  DIALOG_IMG_BIG_REF.innerHTML = `<img src="${GALLERY[i]}">`;
+}

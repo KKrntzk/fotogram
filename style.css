@@ -96,7 +96,6 @@ dialog {
 
 .DialogFooter {
   display: flex;
-  position: fixed;
 }
 
 .DialogBtns {
