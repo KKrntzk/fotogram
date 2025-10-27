@@ -20,12 +20,12 @@ function renderImgOnload() {
   }
 }
 
-const dialogRef = document.getElementById("dialogImgPopup");
+const DIALOG_REF = document.getElementById("dialogImgPopup");
 
 function openDialog() {
-  dialogRef.showModal();
+  DIALOG_REF.showModal();
 }
 
 function closeDialog() {
-  dialogRef.close();
+  DIALOG_REF.close();
 }
