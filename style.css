@@ -86,6 +86,8 @@ dialog {
 }
 
 .DialogHeader {
+  margin-right: 24px;
+  margin-top: 24px;
   height: 40px;
   display: flex;
   justify-content: space-between;

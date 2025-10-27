@@ -16,7 +16,7 @@ const gallery = [
 function renderImgOnload() {
   const containerRef = document.getElementById("imgContainer");
   for (let counter = 0; counter < gallery.length; counter++) {
-    containerRef.innerHTML += `<div><img onclick="renderImgDialog()" aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog()" class="ImgStyling" src="${gallery[counter]}" alt=""></div>`;
+    containerRef.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog()" class="ImgStyling" src="${gallery[counter]}" alt=""></div>`;
   }
 }
 
@@ -24,9 +24,10 @@ const dialogRef = document.getElementById("dialogImgPopup");
 
 function openDialog() {
   dialogRef.showModal();
+  const containerRef = document.getElementById("DialogImgRenderedBig");
+  containerRef.innerHTML = `${gallery[counter]}`;
 }
 
 function closeDialog() {
   dialogRef.close();
 }
-function renderImgDialog() {}
