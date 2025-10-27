@@ -31,6 +31,10 @@ main {
   align-items: center;
 }
 
+.galler-section {
+  display: flex;
+}
+
 .main-footer {
   height: 120px;
   background-color: #082029;

@@ -16,8 +16,7 @@ const gallery = [
 
 function renderImgOnload() {
   const containerRef = document.getElementById("imgContainer");
-
   for (let counter = 0; counter < gallery.length; counter++) {
-    containerRef.innerHTML += `<div class="galleryimg"><img src="${gallery}" alt=""></div>`;
+    containerRef.innerHTML += `<div><img src="${gallery[counter]}" alt=""></div>`;
   }
 }
