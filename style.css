@@ -77,6 +77,14 @@ main {
   width: 100%;
 }
 
+dialog {
+  height: 1200px;
+  width: 600px;
+  border-radius: 25px;
+  border-color: none;
+  background-color: #082029;
+}
+
 .DialogHeader {
   height: 40px;
   display: flex;
@@ -86,9 +94,11 @@ main {
 
 .DialogFooter {
   display: flex;
+  position: fixed;
 }
 
 .DialogBtns {
+  background-color: none;
   border: none;
 }
 .DialogBtns:hover {
