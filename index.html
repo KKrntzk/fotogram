@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body onload="renderImgOnload()">
     <header class="main-header">
@@ -23,7 +23,7 @@
       <section class="gallery-section" id="imgContainer"></section>
 
       <dialog id="dialog">
-        <header>
+        <header class="dialogHeader">
           <div id="dialogHeader"></div>
           <button onclick="closeDialog()">
             <img src="./img/closebtn.png" alt="x Button" />
