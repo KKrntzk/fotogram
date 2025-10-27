@@ -16,6 +16,16 @@ const gallery = [
 function renderImgOnload() {
   const containerRef = document.getElementById("imgContainer");
   for (let counter = 0; counter < gallery.length; counter++) {
-    containerRef.innerHTML += `<div><img class="img-styling" src="${gallery[counter]}" alt=""></div>`;
+    containerRef.innerHTML += `<div><img onclick="openDialog()" class="img-styling" src="${gallery[counter]}" alt=""></div>`;
   }
+}
+
+const dialogRef = document.getElementById("dialog");
+
+function openDialog() {
+  dialogRef.showModal();
+}
+
+function closeDialog() {
+  dialogRef.close();
 }

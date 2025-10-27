@@ -22,20 +22,20 @@
 
       <section class="gallery-section" id="imgContainer"></section>
 
-      <section>
-        <dialog>
-          <header>
-            <div id="dialogHeader"></div>
-            <button><img src="./img/closebtn.png" alt="x Button" /></button>
-          </header>
-          <div></div>
-          <footer>
-            <button><img src="./img/arrowleft.png" alt="" /></button>
-            <div><p id="dialogImgCounter"></p></div>
-            <button><img src="./img/arrowright.png" alt="" /></button>
-          </footer>
-        </dialog>
-      </section>
+      <dialog id="dialog">
+        <header>
+          <div id="dialogHeader"></div>
+          <button onclick="closeDialog()">
+            <img src="./img/closebtn.png" alt="x Button" />
+          </button>
+        </header>
+        <div></div>
+        <footer>
+          <button><img src="./img/arrowleft.png" alt="" /></button>
+          <div><p id="dialogImgCounter"></p></div>
+          <button><img src="./img/arrowright.png" alt="" /></button>
+        </footer>
+      </dialog>
     </main>
 
     <footer class="main-footer">
