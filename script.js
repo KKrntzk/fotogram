@@ -1,6 +1,6 @@
 const gallery = [
   "./img/castle-7728772_1280.png",
-  "./imgedinburgh-view-4959200_1280.png",
+  "./img/edinburgh-view-4959200_1280.png",
   "./img/eilean-donan-castle-4785333_1280.png",
   "./img/landscape-5071102_1280.png",
   "./img/landscape-5071102_1280.png",
@@ -18,6 +18,6 @@ function renderImgOnload() {
   const containerRef = document.getElementById("imgContainer");
 
   for (let counter = 0; counter < gallery.length; counter++) {
-    containerRef.innerHTML += `<div class`;
+    containerRef.innerHTML += `<div class="galleryimg"><img src="${gallery}" alt=""></div>`;
   }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js"></script>
   </head>
-  <body>
+  <body onload="renderImgOnload()">
     <header class="main-header">
       <img
         class="logo-img"
@@ -20,9 +20,7 @@
         <h1>Your personal photo album</h1>
       </section>
 
-      <section>
-        <div id="imgContainer"></div>
-      </section>
+      <section id="imgContainer"></section>
 
       <section>
         <dialog>
