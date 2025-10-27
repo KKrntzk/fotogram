@@ -31,8 +31,19 @@ main {
   align-items: center;
 }
 
-.galler-section {
+.gallery-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-styling {
+  border-radius: 25px;
+  margin: 16px;
+}
+
+.img-styling:hover {
+  cursor: pointer;
 }
 
 .main-footer {

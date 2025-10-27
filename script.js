@@ -3,7 +3,6 @@ const gallery = [
   "./img/edinburgh-view-4959200_1280.png",
   "./img/eilean-donan-castle-4785333_1280.png",
   "./img/landscape-5071102_1280.png",
-  "./img/landscape-5071102_1280.png",
   "./img/neist-point-540119_1280.png",
   "./img/road-4955680_1280.png",
   "./img/scotland-2790177_1280.png",
@@ -17,6 +16,6 @@ const gallery = [
 function renderImgOnload() {
   const containerRef = document.getElementById("imgContainer");
   for (let counter = 0; counter < gallery.length; counter++) {
-    containerRef.innerHTML += `<div><img src="${gallery[counter]}" alt=""></div>`;
+    containerRef.innerHTML += `<div><img class="img-styling" src="${gallery[counter]}" alt=""></div>`;
   }
 }
