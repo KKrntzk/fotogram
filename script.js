@@ -1,4 +1,4 @@
-const gallery = [
+const GALLERY = [
   "./img/castle-7728772_1280.png",
   "./img/edinburgh-view-4959200_1280.png",
   "./img/eilean-donan-castle-4785333_1280.png",
@@ -14,9 +14,9 @@ const gallery = [
 ];
 
 function renderImgOnload() {
-  const containerRef = document.getElementById("imgContainer");
-  for (let counter = 0; counter < gallery.length; counter++) {
-    containerRef.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog()" class="ImgStyling" src="${gallery[counter]}" alt=""></div>`;
+  const CONTAINER_REF = document.getElementById("imgContainer");
+  for (let counter = 0; counter < GALLERY.length; counter++) {
+    CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog()" class="ImgStyling" src="${GALLERY[counter]}" alt=""></div>`;
   }
 }
 
@@ -24,8 +24,6 @@ const dialogRef = document.getElementById("dialogImgPopup");
 
 function openDialog() {
   dialogRef.showModal();
-  const containerRef = document.getElementById("DialogImgRenderedBig");
-  containerRef.innerHTML = `${gallery[counter]}`;
 }
 
 function closeDialog() {
