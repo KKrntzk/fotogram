@@ -34,6 +34,8 @@ function openDialog(counterindex) {
   FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
               <img src="./img/arrowright.png" alt="" />
             </button>`;
+  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
+  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
 }
 
 function closeDialog() {
@@ -70,22 +72,15 @@ function goForth(counterindex) {
 
 const GALLERY_NAMES = [
   "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
-  "Edinborough Castle",
+  "Edinborough from afar",
+  "Elein Dolan Castle",
+  "Scottish Landscape",
+  "Isle of Skye",
+  "Scottish scenery",
+  "Highlands",
+  "Scottish Castle",
+  "Duncansby Head",
+  "Scotland in Winter",
+  "Kilt Rock",
+  "Isle of Fairy Pools",
 ];
-
-function renderNamesOnOpenDialog(test) {
-  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
-  for (let x = 0; x < GALLERY_NAMES.length; x++) {
-    DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[test]}</p>`;
-  }
-}
