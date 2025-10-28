@@ -13,6 +13,21 @@ const GALLERY = [
   "./img/waterfall-9828788_1280.png",
 ];
 
+const GALLERY_NAMES = [
+  "Edinborough Castle",
+  "Edinborough from afar",
+  "Elein Dolan Castle",
+  "Scottish Landscape",
+  "Isle of Skye",
+  "Scottish scenery",
+  "Highlands",
+  "Scottish Castle",
+  "Duncansby Head",
+  "Scotland in Winter",
+  "Kilt Rock",
+  "Isle of Fairy Pools",
+];
+
 function renderImgOnload() {
   const CONTAINER_REF = document.getElementById("imgContainer");
   for (let counter = 0; counter < GALLERY.length; counter++) {
@@ -36,6 +51,10 @@ function openDialog(counterindex) {
             </button>`;
   const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
+  const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
+    "dialogImgCounterContainer"
+  );
+  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${counterindex + 1} /12</p>`;
 }
 
 function closeDialog() {
@@ -54,6 +73,14 @@ function goBack(counterindex) {
   })" class="DialogBtns" id="goBackBtn">
               <img src="./img/arrowleft.png" alt="" />
             </button>`;
+  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
+  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex - 1]}</p>`;
+  const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
+    "dialogImgCounterContainer"
+  );
+  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
+    counterindex + 1 - 1
+  } /12</p>`;
 }
 
 function goForth(counterindex) {
@@ -68,19 +95,12 @@ function goForth(counterindex) {
   })" class="DialogBtns" id="goForthBtn">
               <img src="./img/arrowright.png" alt="" />
             </button>`;
+  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
+  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex + 1]}</p>`;
+  const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
+    "dialogImgCounterContainer"
+  );
+  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
+    counterindex + 1 + 1
+  } /12</p>`;
 }
-
-const GALLERY_NAMES = [
-  "Edinborough Castle",
-  "Edinborough from afar",
-  "Elein Dolan Castle",
-  "Scottish Landscape",
-  "Isle of Skye",
-  "Scottish scenery",
-  "Highlands",
-  "Scottish Castle",
-  "Duncansby Head",
-  "Scotland in Winter",
-  "Kilt Rock",
-  "Isle of Fairy Pools",
-];
