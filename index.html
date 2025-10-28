@@ -12,41 +12,39 @@
     />
   </head>
   <body onload="renderImgOnload()">
-    <div class="Site">
-      <header class="MainHeader">
-        <img
-          class="LogoImg"
-          src="./img/Fotogram_Logo.svg"
-          alt="Logo of the website, depicting a colorful flower and the name"
-        />
-      </header>
-      <main>
-        <section class="SectionH1">
-          <h1>Your personal photo album</h1>
-        </section>
+    <header class="MainHeader">
+      <img
+        class="LogoImg"
+        src="./img/Fotogram_Logo.svg"
+        alt="Logo of the website, depicting a colorful flower and the name"
+      />
+    </header>
+    <main>
+      <section class="SectionH1">
+        <h1>Your personal photo album</h1>
+      </section>
 
-        <section class="GallerySection" id="imgContainer"></section>
+      <section class="GallerySection" id="imgContainer"></section>
 
-        <dialog id="dialogImgPopup">
-          <header class="DialogHeader">
-            <div id="dialogHeader"></div>
-            <button class="DialogBtns" onclick="closeDialog()">
-              <img src="./img/closebtn.png" alt="x Button" />
-            </button>
-          </header>
-          <div id="DialogImgRenderedBig"></div>
-          <footer class="DialogFooter">
-            <button onclick="goBack()" class="DialogBtns" id="goBackBtn">
-              <img src="./img/arrowleft.png" alt="" />
-            </button>
-            <div><p id="dialogImgCounter"></p></div>
-            <button onclick="goForth()" class="DialogBtns" id="goForthBtn">
-              <img src="./img/arrowright.png" alt="" />
-            </button>
-          </footer>
-        </dialog>
-      </main>
-    </div>
+      <dialog id="dialogImgPopup">
+        <header class="DialogHeader">
+          <div id="dialogHeader"></div>
+          <button class="DialogBtns" onclick="closeDialog()">
+            <img src="./img/closebtn.png" alt="x Button" />
+          </button>
+        </header>
+        <div id="DialogImgRenderedBig"></div>
+        <footer class="DialogFooter">
+          <button onclick="goBack()" class="DialogBtns" id="goBackBtn">
+            <img src="./img/arrowleft.png" alt="" />
+          </button>
+          <div><p id="dialogImgCounter"></p></div>
+          <button onclick="goForth()" class="DialogBtns" id="goForthBtn">
+            <img src="./img/arrowright.png" alt="" />
+          </button>
+        </footer>
+      </dialog>
+    </main>
 
     <footer class="MainFooter">
       <img
