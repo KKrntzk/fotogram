@@ -162,7 +162,7 @@ dialog {
   }
 }
 
-@media (max-width: 555px) {
+@media (max-width: 600px) {
   .MainFooter {
     margin-top: 24px;
   }

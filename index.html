@@ -35,7 +35,11 @@
         </header>
         <div id="DialogImgRenderedBig"></div>
         <footer class="DialogFooter">
-          <button onclick="goBack()" class="DialogBtns" id="goBackBtn">
+          <button
+            onclick="goBack({counterindex[GALLERY]})"
+            class="DialogBtns"
+            id="goBackBtn"
+          >
             <img src="./img/arrowleft.png" alt="" />
           </button>
           <div><p id="dialogImgCounter"></p></div>

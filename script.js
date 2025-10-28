@@ -47,3 +47,25 @@ function goForth(counterindex) {
     counterindex + 1
   }" class="ImgBigStyling" src="${GALLERY[counterindex + 1]}"></div>`;
 }
+
+// const GALLERY_NAMES = [
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+//   "Edinborough Castle",
+// ];
+
+// function renderNamesOnOpenDialog(x) {
+//   const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
+//   for (let x = 0; x < GALLERY_NAMES.length; x++) {
+//     DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[x]}</p>`;
+//   }
+// }
