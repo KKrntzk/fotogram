@@ -18,7 +18,6 @@ html {
 
 body,
 html {
-  margin: 0;
   height: 100%;
 }
 
@@ -38,7 +37,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 64px;
 }
 
 .MainHeader {
@@ -56,8 +54,7 @@ main {
 }
 
 .SectionH1 {
-  margin-top: 64px;
-  margin-bottom: 64px;
+  margin: 0;
   font-size: 32px;
 }
 
@@ -91,7 +88,7 @@ dialog {
   width: 600px;
   border-radius: 25px;
   border-color: #082029;
-  background-color: #082029;
+  background-color: rgba(8, 32, 41, 0.849);
   position: absolute;
 }
 
@@ -130,4 +127,43 @@ dialog {
   border-radius: 25px;
   width: 500px;
   height: 500px;
+}
+
+/* mediaqueries */
+
+@media (max-width: 1300px) {
+  .SectionH1 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .SectionH1 {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+  }
+
+  .ImgStyling {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 845px) {
+  .SectionH1 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 845px) {
+  .MainFooter {
+    margin-top: 24px;
+  }
 }
