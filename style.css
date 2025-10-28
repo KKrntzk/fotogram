@@ -24,7 +24,6 @@ html {
 
 body {
   margin: 0 auto;
-
   font-family: "Climate Crisis";
   display: flex;
   flex-direction: column;
@@ -93,16 +92,17 @@ main {
 }
 
 dialog {
-  height: 1200px;
+  height: 1000px;
   width: 600px;
   border-radius: 25px;
+  border-color: #082029;
   background-color: #082029;
   position: absolute;
 }
 
 .DialogHeader {
   margin-right: 24px;
-  margin-top: 24px;
+  margin-top: 32px;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -111,6 +111,8 @@ dialog {
 
 .DialogFooter {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .DialogBtns {
@@ -121,8 +123,16 @@ dialog {
   cursor: pointer;
 }
 
+.ContainerImgBig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
 .ImgBigStyling {
   border-radius: 25px;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }

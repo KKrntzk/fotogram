@@ -24,10 +24,28 @@ const DIALOG_REF = document.getElementById("dialogImgPopup");
 
 function openDialog(counterindex) {
   const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
-  DIALOG_IMG_BIG_REF.innerHTML = `<img id="weissIchNochNicht" class="ImgBigStyling" src="${GALLERY[counterindex]}">`;
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="weissIchNochNicht" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
 }
 
 function closeDialog() {
   DIALOG_REF.close();
+}
+
+function goBack() {
+  let I = 0;
+  if (I >= GALLERY.length) I += 0;
+  document.getElementById(
+    "DialogImgRenderedBig"
+  ).innerHTML += `<div class="ContainerImgBig"><img id="weissIchNochNicht" class="ImgBigStyling" src="${GALLERY[I]}"></div>`;
+}
+
+function foForth() {}
+
+function iterateThroughImgs() {
+  if (goBack.clicked == true) {
+  }
+  if (goForth) {
+  } else {
+  }
 }
