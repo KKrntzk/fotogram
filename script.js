@@ -36,24 +36,24 @@ function renderImgOnload() {
 }
 
 const DIALOG_REF = document.getElementById("dialogImgPopup");
+const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
+const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
+const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
+const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
+const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
+  "dialogImgCounterContainer"
+);
 
 function openDialog(counterindex) {
-  const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
-  const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
   BACK_BTN_CONTAINER_REF.innerHTML = `<button onclick="goBack(${counterindex})" class="DialogBtns" id="goBackBtn">
               <img src="./img/arrowleft.png" alt="" />
             </button>`;
-  const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
   FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
               <img src="./img/arrowright.png" alt="" />
             </button>`;
-  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
-  const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
-    "dialogImgCounterContainer"
-  );
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${counterindex + 1} /12</p>`;
 }
 
@@ -62,44 +62,32 @@ function closeDialog() {
 }
 
 function goBack(counterindex) {
-  const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
   DIALOG_IMG_BIG_REF.innerHTML = "";
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
     counterindex - 1
   }" class="ImgBigStyling" src="${GALLERY[counterindex - 1]}"></div>`;
-  const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
   BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack(${
     counterindex - 1
   })" class="DialogBtns" id="goBackBtn">
               <img src="./img/arrowleft.png" alt="" />
             </button>`;
-  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex - 1]}</p>`;
-  const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
-    "dialogImgCounterContainer"
-  );
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
     counterindex + 1 - 1
   } /12</p>`;
 }
 
 function goForth(counterindex) {
-  const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
   DIALOG_IMG_BIG_REF.innerHTML = "";
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
     counterindex + 1
   }" class="ImgBigStyling" src="${GALLERY[counterindex + 1]}"></div>`;
-  const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
   FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${
     counterindex + 1
   })" class="DialogBtns" id="goForthBtn">
               <img src="./img/arrowright.png" alt="" />
             </button>`;
-  const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex + 1]}</p>`;
-  const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
-    "dialogImgCounterContainer"
-  );
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
     counterindex + 1 + 1
   } /12</p>`;
