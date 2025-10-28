@@ -24,7 +24,7 @@ const DIALOG_REF = document.getElementById("dialogImgPopup");
 
 function openDialog(counterindex) {
   const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
-  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="weissIchNochNicht" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
 }
 
@@ -32,20 +32,18 @@ function closeDialog() {
   DIALOG_REF.close();
 }
 
-function goBack() {
-  let I = 0;
-  if (I >= GALLERY.length) I += 0;
-  document.getElementById(
-    "DialogImgRenderedBig"
-  ).innerHTML += `<div class="ContainerImgBig"><img id="weissIchNochNicht" class="ImgBigStyling" src="${GALLERY[I]}"></div>`;
+function goBack(counterindex) {
+  const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
+  DIALOG_IMG_BIG_REF.innerHTML = "";
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
+    counterindex - 1
+  }" class="ImgBigStyling" src="${GALLERY[counterindex - 1]}"></div>`;
 }
 
-function foForth() {}
-
-function iterateThroughImgs() {
-  if (goBack.clicked == true) {
-  }
-  if (goForth) {
-  } else {
-  }
+function goForth(counterindex) {
+  const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
+  DIALOG_IMG_BIG_REF.innerHTML = "";
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
+    counterindex + 1
+  }" class="ImgBigStyling" src="${GALLERY[counterindex + 1]}"></div>`;
 }
