@@ -26,6 +26,14 @@ function openDialog(counterindex) {
   const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
+  const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
+  BACK_BTN_CONTAINER_REF.innerHTML = `<button onclick="goBack(${counterindex})" class="DialogBtns" id="goBackBtn">
+              <img src="./img/arrowleft.png" alt="" />
+            </button>`;
+  const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
+  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
+              <img src="./img/arrowright.png" alt="" />
+            </button>`;
 }
 
 function closeDialog() {
@@ -38,6 +46,12 @@ function goBack(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
     counterindex - 1
   }" class="ImgBigStyling" src="${GALLERY[counterindex - 1]}"></div>`;
+  const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
+  BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack(${
+    counterindex - 1
+  })" class="DialogBtns" id="goBackBtn">
+              <img src="./img/arrowleft.png" alt="" />
+            </button>`;
 }
 
 function goForth(counterindex) {
@@ -46,6 +60,12 @@ function goForth(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
     counterindex + 1
   }" class="ImgBigStyling" src="${GALLERY[counterindex + 1]}"></div>`;
+  const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
+  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${
+    counterindex + 1
+  })" class="DialogBtns" id="goForthBtn">
+              <img src="./img/arrowright.png" alt="" />
+            </button>`;
 }
 
 const GALLERY_NAMES = [
