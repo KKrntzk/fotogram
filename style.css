@@ -108,7 +108,7 @@ dialog {
 }
 
 .DialogBtns {
-  background-color: #082029;
+  background-color: rgba(8, 32, 41, 0.849);
   border: none;
 }
 .DialogBtns:hover {
@@ -162,8 +162,22 @@ dialog {
   }
 }
 
-@media (max-width: 845px) {
+@media (max-width: 555px) {
   .MainFooter {
     margin-top: 24px;
+  }
+
+  dialog {
+    height: 800px;
+    width: 400px;
+    border-radius: 25px;
+    border-color: #082029;
+    background-color: rgba(8, 32, 41, 0.849);
+    position: absolute;
+  }
+
+  .ImgBigStyling {
+    width: 300px;
+    height: 300px;
   }
 }
