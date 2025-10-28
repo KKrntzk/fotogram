@@ -16,21 +16,18 @@ const GALLERY = [
 function renderImgOnload() {
   const CONTAINER_REF = document.getElementById("imgContainer");
   for (let counter = 0; counter < GALLERY.length; counter++) {
-    CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog()" class="ImgStyling" src="${GALLERY[counter]}" alt=""></div>`;
+    CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog(${counter})" class="ImgStyling" src="${GALLERY[counter]}" alt=""></div>`;
   }
 }
 
 const DIALOG_REF = document.getElementById("dialogImgPopup");
 
-function openDialog() {
+function openDialog(counterindex) {
+  const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
+  DIALOG_IMG_BIG_REF.innerHTML = `<img id="weissIchNochNicht" class="ImgBigStyling" src="${GALLERY[counterindex]}">`;
   DIALOG_REF.showModal();
 }
 
 function closeDialog() {
   DIALOG_REF.close();
-}
-
-const DIALOG_IMG_BIG_REF = document.getElementById("DialogRenderedBigImg");
-for (let i = 0; i < GALLERY.length; i++) {
-  DIALOG_IMG_BIG_REF.innerHTML = `<img src="${GALLERY[i]}">`;
 }

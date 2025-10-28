@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
@@ -17,7 +16,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
 body {
+  margin: 0 auto;
+
   font-family: "Climate Crisis";
   display: flex;
   flex-direction: column;
@@ -31,10 +38,17 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 64px;
+}
+
+.Site {
+  height: auto;
+  min-height: 100%;
 }
 
 .MainHeader {
   height: 120px;
+  width: 100dvw;
   background-color: #082029;
   display: flex;
   align-items: center;
@@ -53,6 +67,8 @@ main {
 }
 
 .GallerySection {
+  flex-wrap: wrap;
+  max-width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,12 +84,11 @@ main {
 }
 
 .MainFooter {
-  height: 120px;
+  min-height: 120px;
+  margin-top: -120px;
   background-color: #082029;
   display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -81,8 +96,8 @@ dialog {
   height: 1200px;
   width: 600px;
   border-radius: 25px;
-  border-color: none;
   background-color: #082029;
+  position: absolute;
 }
 
 .DialogHeader {
@@ -104,4 +119,10 @@ dialog {
 }
 .DialogBtns:hover {
   cursor: pointer;
+}
+
+.ImgBigStyling {
+  border-radius: 25px;
+  width: 400px;
+  height: 400px;
 }
