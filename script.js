@@ -43,6 +43,7 @@ const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
 const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
   "dialogImgCounterContainer"
 );
+let ACTUAL_IMG_INDEX = 0;
 
 function openDialog(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
@@ -55,40 +56,41 @@ function openDialog(counterindex) {
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${counterindex + 1} /12</p>`;
+  ACTUAL_IMG_INDEX = counterindex;
 }
 
 function closeDialog() {
   DIALOG_REF.close();
 }
 
-function goBack(counterindex) {
+function goBack() {
+  if (ACTUAL_IMG_INDEX - 1 < 0) {
+    ACTUAL_IMG_INDEX = GALLERY.length - 1;
+  } else {
+    ACTUAL_IMG_INDEX--;
+  }
   DIALOG_IMG_BIG_REF.innerHTML = "";
-  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
-    counterindex - 1
-  }" class="ImgBigStyling" src="${GALLERY[counterindex - 1]}"></div>`;
-  BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack(${
-    counterindex - 1
-  })" class="DialogBtns" id="goBackBtn">
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="ImgBigStyling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
+  BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack()" class="DialogBtns" id="goBackBtn">
               <img src="./img/arrowleft.png" alt="" />
             </button>`;
-  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex - 1]}</p>`;
-  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
-    counterindex + 1 - 1
-  } /12</p>`;
+  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
+  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${ACTUAL_IMG_INDEX} /12</p>`;
 }
 
-function goForth(counterindex) {
+function goForth() {
+  if (ACTUAL_IMG_INDEX + 1 > GALLERY.length - 1) {
+    ACTUAL_IMG_INDEX = 0;
+  } else {
+    ACTUAL_IMG_INDEX++;
+  }
   DIALOG_IMG_BIG_REF.innerHTML = "";
-  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${
-    counterindex + 1
-  }" class="ImgBigStyling" src="${GALLERY[counterindex + 1]}"></div>`;
-  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${
-    counterindex + 1
-  })" class="DialogBtns" id="goForthBtn">
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="ImgBigStyling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
+  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth()" class="DialogBtns" id="goForthBtn">
               <img src="./img/arrowright.png" alt="" />
             </button>`;
-  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex + 1]}</p>`;
+  DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
-    counterindex + 1 + 1
+    ACTUAL_IMG_INDEX + 1
   } /12</p>`;
 }
