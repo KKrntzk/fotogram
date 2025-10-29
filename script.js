@@ -63,10 +63,10 @@ function renderImgOnload() {
 function openDialog(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
-  BACK_BTN_CONTAINER_REF.innerHTML = `<button onclick="goBack(${counterindex})" class="DialogBtns" id="goBackBtn">
+  BACK_BTN_CONTAINER_REF.innerHTML = `<button role="go-backwards-through-gallery" onclick="goBack(${counterindex})" class="DialogBtns" id="goBackBtn">
               <img class="BtnImg" src="./img/arrowleft.png" alt="" />
             </button>`;
-  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
+  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button role="go-forwards-through-gallery" onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
               <img class="BtnImg" src="./img/arrowright.png" alt="" />
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
