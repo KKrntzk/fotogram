@@ -64,10 +64,10 @@ function openDialog(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
   BACK_BTN_CONTAINER_REF.innerHTML = `<button onclick="goBack(${counterindex})" class="DialogBtns" id="goBackBtn">
-              <img src="./img/arrowleft.png" alt="" />
+              <img class="BtnImg" src="./img/arrowleft.png" alt="" />
             </button>`;
   FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
-              <img src="./img/arrowright.png" alt="" />
+              <img class="BtnImg" src="./img/arrowright.png" alt="" />
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${counterindex + 1} /12</p>`;
