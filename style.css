@@ -24,11 +24,11 @@ html {
 body {
   margin: 0 auto;
   font-family: "Climate Crisis";
+  width: 100dvw;
+  background-color: #05171e;
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100dvw;
-  background-color: #05171e;
 }
 
 main {
@@ -67,10 +67,10 @@ main {
 }
 
 .ImgStyling {
-  border-radius: 25px;
   margin: 16px;
-  width: 200px;
   height: 200px;
+  width: 200px;
+  border-radius: 25px;
 }
 
 .ImgStyling:hover {
@@ -82,10 +82,10 @@ main {
 
 .MainFooter {
   height: 120px;
+  width: 100%;
   background-color: #082029;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 /* Dialog css */
@@ -130,17 +130,17 @@ dialog::backdrop {
 }
 
 .ContainerImgBig {
+  margin-top: 150px;
+  margin-bottom: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
-  margin-bottom: 150px;
 }
 
 .ImgBigStyling {
-  border-radius: 25px;
-  width: 500px;
   height: 500px;
+  width: 500px;
+  border-radius: 25px;
 }
 
 /* mediaqueries */
@@ -157,10 +157,10 @@ dialog::backdrop {
   .SectionH1 {
     margin-top: 48px;
     margin-bottom: 48px;
+    max-width: 90%;
     font-size: 20px;
     display: flex;
     justify-content: center;
-    max-width: 90%;
   }
 
   .ImgStyling {
@@ -191,15 +191,15 @@ dialog::backdrop {
   }
 
   .ImgBigStyling {
-    width: 300px;
     height: 300px;
+    width: 300px;
   }
 }
 
 @media (max-width: 340px) {
   .ImgStyling {
+    margin: 8px;
     height: 100px;
     width: 100px;
-    margin: 8px;
   }
 }
