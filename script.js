@@ -94,7 +94,9 @@ function goBack() {
               <img src="./img/arrowleft.png" alt="" />
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
-  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${ACTUAL_IMG_INDEX} /12</p>`;
+  DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
+    ACTUAL_IMG_INDEX + 1
+  } /12</p>`;
 }
 
 /* Funktion checkt, ob der Index des Arrays GALLERY länger is als die Länge de Arrays, um dann zu loopen. Funktion bewegt sich onclick vorwärts durch das Array GALLERY. */

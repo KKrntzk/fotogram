@@ -9,7 +9,7 @@
   font-family: "Climate Crisis";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/climate-crisis-v14-latin-regular.woff2") format("woff2");
+  src: url("./fonts/climate-crisis-v14-latin-regular.woff2") format("woff2");
 }
 
 html {
