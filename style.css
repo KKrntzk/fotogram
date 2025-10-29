@@ -73,6 +73,9 @@ main {
 
 .ImgStyling:hover {
   cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(134, 176, 216);
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 
 .MainFooter {
@@ -120,6 +123,8 @@ dialog::backdrop {
 }
 .DialogBtns:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 50ms ease-in-out;
 }
 
 .ContainerImgBig {
