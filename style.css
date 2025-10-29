@@ -203,6 +203,20 @@ dialog::backdrop {
     height: 40px;
     width: 40px;
   }
+
+  .LogoImg {
+    height: 40px;
+    width: 150px;
+    padding-left: 0;
+  }
+
+  .MainHeader {
+    justify-content: center;
+  }
+
+  .MainFooter {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 340px) {
