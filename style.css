@@ -90,8 +90,12 @@ dialog {
   width: 600px;
   border-radius: 25px;
   border-color: #082029;
-  background-color: rgba(8, 32, 41, 0.849);
+  background-color: rgba(12, 49, 63, 0.849);
   position: absolute;
+}
+
+dialog::backdrop {
+  background-color: #071c25b4;
 }
 
 .DialogHeader {
