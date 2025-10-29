@@ -49,12 +49,16 @@ const GALLERY_NAMES = [
 
 //#region FUNCTIONS
 
+/* Funktion rendert alle Bilder aus dem Array GALLERY onload */
+
 function renderImgOnload() {
   const CONTAINER_REF = document.getElementById("imgContainer");
   for (let counter = 0; counter < GALLERY.length; counter++) {
     CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog(${counter})" class="ImgStyling" src="${GALLERY[counter]}" alt=""></div>`;
   }
 }
+
+/* Funktion öffnet ein Dialog onclick und rendert dann img, btns und 'Img-Zähler' in das Dialogfeld */
 
 function openDialog(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
@@ -70,9 +74,13 @@ function openDialog(counterindex) {
   ACTUAL_IMG_INDEX = counterindex;
 }
 
+/* Funktion schliesst das Dialogfeld */
+
 function closeDialog() {
   DIALOG_REF.close();
 }
+
+/* Funktion checkt, ob der Index des Arrays GALLERY unter null ist, um dann zu loopen. Funktion bewegt sich onclick rückwerts durch das Array GALLERY. */
 
 function goBack() {
   if (ACTUAL_IMG_INDEX - 1 < 0) {
@@ -88,6 +96,8 @@ function goBack() {
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${ACTUAL_IMG_INDEX} /12</p>`;
 }
+
+/* Funktion checkt, ob der Index des Arrays GALLERY länger is als die Länge de Arrays, um dann zu loopen. Funktion bewegt sich onclick vorwärts durch das Array GALLERY. */
 
 function goForth() {
   if (ACTUAL_IMG_INDEX + 1 > GALLERY.length - 1) {
