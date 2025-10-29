@@ -69,6 +69,8 @@ main {
 .ImgStyling {
   border-radius: 25px;
   margin: 16px;
+  width: 200px;
+  height: 200px;
 }
 
 .ImgStyling:hover {
