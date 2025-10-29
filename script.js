@@ -1,3 +1,20 @@
+//#region GLOBAL VARIABLES
+
+const DIALOG_REF = document.getElementById("dialogImgPopup");
+const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
+const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
+const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
+const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
+const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
+  "dialogImgCounterContainer"
+);
+
+let ACTUAL_IMG_INDEX = 0;
+
+//#endregion
+
+//#region ARRAYS
+
 const GALLERY = [
   "./img/castle-7728772_1280.png",
   "./img/edinburgh-view-4959200_1280.png",
@@ -28,22 +45,16 @@ const GALLERY_NAMES = [
   "Isle of Fairy Pools",
 ];
 
+//#endregion
+
+//#region FUNCTIONS
+
 function renderImgOnload() {
   const CONTAINER_REF = document.getElementById("imgContainer");
   for (let counter = 0; counter < GALLERY.length; counter++) {
     CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog(${counter})" class="ImgStyling" src="${GALLERY[counter]}" alt=""></div>`;
   }
 }
-
-const DIALOG_REF = document.getElementById("dialogImgPopup");
-const DIALOG_IMG_BIG_REF = document.getElementById("DialogImgRenderedBig");
-const BACK_BTN_CONTAINER_REF = document.getElementById("backBtnContainer");
-const FORTH_BTN_CONTAINER_REF = document.getElementById("forthBtnContainer");
-const DIALOG_IMG_NAME_REF = document.getElementById("dialogHeader");
-const DIALOG_IMG_COUNTER_CONTAINER_REF = document.getElementById(
-  "dialogImgCounterContainer"
-);
-let ACTUAL_IMG_INDEX = 0;
 
 function openDialog(counterindex) {
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
@@ -94,3 +105,5 @@ function goForth() {
     ACTUAL_IMG_INDEX + 1
   } /12</p>`;
 }
+
+//#endregion
