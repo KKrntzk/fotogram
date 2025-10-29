@@ -99,7 +99,7 @@ function goBack() {
   } /12</p>`;
 }
 
-/* Funktion checkt, ob der Index des Arrays GALLERY länger is als die Länge de Arrays, um dann zu loopen. Funktion bewegt sich onclick vorwärts durch das Array GALLERY. */
+/* Funktion checkt, ob der Index des Arrays GALLERY länger is als die Länge des Arrays, um dann zu loopen. Funktion bewegt sich onclick vorwärts durch das Array GALLERY. */
 
 function goForth() {
   if (ACTUAL_IMG_INDEX + 1 > GALLERY.length - 1) {
