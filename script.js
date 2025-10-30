@@ -61,6 +61,8 @@ function renderImgOnload() {
 /* Funktion öffnet ein Dialog onclick und rendert dann img, btns und 'Img-Zähler' in das Dialogfeld */
 
 function openDialog(counterindex) {
+  const openedDialog = document.getElementById("dialogImgPopup");
+  openedDialog.classList.add("dialog-opened");
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${counterindex}" class="img-big-styling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
   BACK_BTN_CONTAINER_REF.innerHTML = `<button role="go-backwards-through-gallery" onclick="goBack(${counterindex})" class="dialog-btns" id="goBackBtn">
@@ -79,6 +81,8 @@ function openDialog(counterindex) {
 /* Funktion schliesst das Dialogfeld */
 
 function closeDialog() {
+  const openedDialog = document.getElementById("dialogImgPopup");
+  openedDialog.classList.remove("dialog-opened");
   DIALOG_REF.close();
 }
 

@@ -120,6 +120,9 @@ dialog {
   border-color: #082029;
   background-color: rgba(12, 49, 63, 0.849);
   position: absolute;
+}
+
+.dialog-opened {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,6 +245,7 @@ p {
 
   .dialog-footer {
     width: 250px;
+    margin-top: 40px;
   }
 
   .img-big-styling {
