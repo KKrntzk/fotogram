@@ -32,7 +32,6 @@ html {
 body {
   margin: 0 auto;
   font-family: "Roboto Flex";
-  width: 100dvw;
   background-color: #05171e;
   display: flex;
   flex-direction: column;
@@ -41,15 +40,24 @@ body {
 
 main {
   height: 100vh;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.section-header {
+  background-color: #082029;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .main-header {
   height: 120px;
-  width: 100dvw;
+  max-width: 1440px;
   background-color: #082029;
   display: flex;
   align-items: center;
@@ -58,7 +66,6 @@ main {
 .logo-img {
   height: 80px;
   width: 300px;
-  padding-left: 63px;
 }
 
 .section-h1 {
@@ -68,7 +75,8 @@ main {
 
 .gallery-section {
   flex-wrap: wrap;
-  max-width: 90%;
+
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,9 +96,16 @@ main {
   transition: 0.3s ease-in-out;
 }
 
+.section-footer {
+  background-color: #082029;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .main-footer {
   height: 120px;
-  width: 100%;
+  max-width: 1440px;
   background-color: #082029;
   display: flex;
   align-items: center;
@@ -190,10 +205,6 @@ p {
 }
 
 @media (max-width: 600px) {
-  .main-footer {
-    margin-top: 24px;
-  }
-
   dialog {
     height: 800px;
     width: 400px;
