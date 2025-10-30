@@ -90,9 +90,6 @@ function goBack() {
   }
   DIALOG_IMG_BIG_REF.innerHTML = "";
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="img-big-styling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
-  BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack()" class="dialog-btns" id="goBackBtn">
-              <img src="./img/arrowleft.png" alt="" />
-            </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
     ACTUAL_IMG_INDEX + 1
@@ -109,9 +106,6 @@ function goForth() {
   }
   DIALOG_IMG_BIG_REF.innerHTML = "";
   DIALOG_IMG_BIG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="img-big-styling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
-  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth()" class="dialog-btns" id="goForthBtn">
-              <img src="./img/arrowright.png" alt="" />
-            </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${
     ACTUAL_IMG_INDEX + 1
