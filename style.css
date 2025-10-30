@@ -111,6 +111,10 @@ dialog::backdrop {
   background-color: #071c25b4;
 }
 
+p {
+  font-size: 28px;
+}
+
 .dialog-header {
   margin-right: 24px;
   margin-left: 24px;
@@ -202,14 +206,13 @@ dialog::backdrop {
 }
 
 @media (max-width: 425px) {
+  p {
+    font-size: 20px;
+  }
+
   .img-big-styling {
     height: 250px;
     width: 250px;
-  }
-
-  .btn-img {
-    height: 40px;
-    width: 40px;
   }
 
   .logo-img {
