@@ -39,9 +39,10 @@ body {
 }
 
 main {
+  margin-top: 120px;
+  margin-bottom: 120px;
   height: 100vh;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,7 +139,7 @@ p {
 }
 
 .dialog-header {
-  width: 500px;
+  width: 85%;
   margin-right: 24px;
   margin-left: 24px;
   margin-top: 32px;
@@ -149,7 +150,7 @@ p {
 }
 
 .dialog-footer {
-  width: 500px;
+  width: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -220,12 +221,7 @@ p {
   }
 
   .dialog-header {
-    width: 300px;
     margin: 0;
-  }
-
-  .dialog-footer {
-    width: 300px;
   }
 
   .img-big-styling {
@@ -239,12 +235,7 @@ p {
     font-size: 20px;
   }
 
-  .dialog-header {
-    width: 250px;
-  }
-
   .dialog-footer {
-    width: 250px;
     margin-top: 40px;
   }
 
