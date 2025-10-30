@@ -12,6 +12,14 @@
   src: url("./fonts/climate-crisis-v14-latin-regular.woff2") format("woff2");
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/roboto-flex-v30-latin-regular.woff2") format("woff2");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,7 +31,7 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: "Climate Crisis";
+  font-family: "Roboto Flex";
   width: 100dvw;
   background-color: #05171e;
   display: flex;
