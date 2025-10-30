@@ -114,12 +114,16 @@ main {
 /* Dialog css */
 
 dialog {
-  height: 1000px;
+  height: 900px;
   width: 600px;
   border-radius: 25px;
   border-color: #082029;
   background-color: rgba(12, 49, 63, 0.849);
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 dialog::backdrop {
@@ -131,6 +135,7 @@ p {
 }
 
 .dialog-header {
+  width: 500px;
   margin-right: 24px;
   margin-left: 24px;
   margin-top: 32px;
@@ -141,6 +146,7 @@ p {
 }
 
 .dialog-footer {
+  width: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -158,8 +164,8 @@ p {
 }
 
 .container-img-big {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,8 +212,17 @@ p {
 
 @media (max-width: 600px) {
   dialog {
-    height: 800px;
+    height: 700px;
     width: 400px;
+  }
+
+  .dialog-header {
+    width: 300px;
+    margin: 0;
+  }
+
+  .dialog-footer {
+    width: 300px;
   }
 
   .img-big-styling {
@@ -219,6 +234,14 @@ p {
 @media (max-width: 425px) {
   p {
     font-size: 20px;
+  }
+
+  .dialog-header {
+    width: 250px;
+  }
+
+  .dialog-footer {
+    width: 250px;
   }
 
   .img-big-styling {
