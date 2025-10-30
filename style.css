@@ -47,7 +47,7 @@ main {
   align-items: center;
 }
 
-.MainHeader {
+.main-header {
   height: 120px;
   width: 100dvw;
   background-color: #082029;
@@ -55,18 +55,18 @@ main {
   align-items: center;
 }
 
-.LogoImg {
+.logo-img {
   height: 80px;
   width: 300px;
   padding-left: 63px;
 }
 
-.SectionH1 {
+.section-h1 {
   margin: 0;
   font-size: 32px;
 }
 
-.GallerySection {
+.gallery-section {
   flex-wrap: wrap;
   max-width: 90%;
   display: flex;
@@ -74,21 +74,21 @@ main {
   align-items: center;
 }
 
-.ImgStyling {
+.img-styling {
   margin: 16px;
   height: 200px;
   width: 200px;
   border-radius: 25px;
 }
 
-.ImgStyling:hover {
+.img-styling:hover {
   cursor: pointer;
   box-shadow: 5px 5px 5px rgb(134, 176, 216);
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
 
-.MainFooter {
+.main-footer {
   height: 120px;
   width: 100%;
   background-color: #082029;
@@ -111,7 +111,7 @@ dialog::backdrop {
   background-color: #071c25b4;
 }
 
-.DialogHeader {
+.dialog-header {
   margin-right: 24px;
   margin-left: 24px;
   margin-top: 32px;
@@ -121,24 +121,24 @@ dialog::backdrop {
   align-items: center;
 }
 
-.DialogFooter {
+.dialog-footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.DialogBtns {
+.dialog-btns {
   background: transparent;
   border: none;
 }
 
-.DialogBtns:hover {
+.dialog-btns:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: 50ms ease-in-out;
 }
 
-.ContainerImgBig {
+.container-img-big {
   margin-top: 150px;
   margin-bottom: 150px;
   display: flex;
@@ -146,7 +146,7 @@ dialog::backdrop {
   align-items: center;
 }
 
-.ImgBigStyling {
+.img-big-styling {
   height: 500px;
   width: 500px;
   border-radius: 25px;
@@ -155,7 +155,7 @@ dialog::backdrop {
 /* mediaqueries */
 
 @media (max-width: 1300px) {
-  .SectionH1 {
+  .section-h1 {
     font-size: 24px;
     display: flex;
     justify-content: center;
@@ -163,7 +163,7 @@ dialog::backdrop {
 }
 
 @media (max-width: 1000px) {
-  .SectionH1 {
+  .section-h1 {
     margin-top: 48px;
     margin-bottom: 48px;
     max-width: 90%;
@@ -172,21 +172,21 @@ dialog::backdrop {
     justify-content: center;
   }
 
-  .ImgStyling {
+  .img-styling {
     height: 120px;
     width: 120px;
   }
 }
 
 @media (max-width: 845px) {
-  .SectionH1 {
+  .section-h1 {
     font-size: 18px;
     text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-  .MainFooter {
+  .main-footer {
     margin-top: 24px;
   }
 
@@ -195,40 +195,40 @@ dialog::backdrop {
     width: 400px;
   }
 
-  .ImgBigStyling {
+  .img-big-styling {
     height: 300px;
     width: 300px;
   }
 }
 
 @media (max-width: 425px) {
-  .ImgBigStyling {
+  .img-big-styling {
     height: 250px;
     width: 250px;
   }
 
-  .BtnImg {
+  .btn-img {
     height: 40px;
     width: 40px;
   }
 
-  .LogoImg {
+  .logo-img {
     height: 40px;
     width: 150px;
     padding-left: 0;
   }
 
-  .MainHeader {
+  .main-header {
     justify-content: center;
   }
 
-  .MainFooter {
+  .main-footer {
     justify-content: center;
   }
 }
 
 @media (max-width: 340px) {
-  .ImgStyling {
+  .img-styling {
     margin: 8px;
     height: 100px;
     width: 100px;

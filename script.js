@@ -54,20 +54,20 @@ const GALLERY_NAMES = [
 function renderImgOnload() {
   const CONTAINER_REF = document.getElementById("imgContainer");
   for (let counter = 0; counter < GALLERY.length; counter++) {
-    CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog(${counter})" class="ImgStyling" src="${GALLERY[counter]}" alt=""></div>`;
+    CONTAINER_REF.innerHTML += `<div><img aria-haspopup="dialog" aria-controls="dialogImgPopup" onclick="openDialog(${counter})" class="img-styling" src="${GALLERY[counter]}" alt=""></div>`;
   }
 }
 
 /* Funktion öffnet ein Dialog onclick und rendert dann img, btns und 'Img-Zähler' in das Dialogfeld */
 
 function openDialog(counterindex) {
-  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${counterindex}" class="ImgBigStyling" src="${GALLERY[counterindex]}"></div>`;
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${counterindex}" class="img-big-styling" src="${GALLERY[counterindex]}"></div>`;
   DIALOG_REF.showModal();
-  BACK_BTN_CONTAINER_REF.innerHTML = `<button role="go-backwards-through-gallery" onclick="goBack(${counterindex})" class="DialogBtns" id="goBackBtn">
-              <img class="BtnImg" src="./img/arrowleft.png" alt="" />
+  BACK_BTN_CONTAINER_REF.innerHTML = `<button role="go-backwards-through-gallery" onclick="goBack(${counterindex})" class="dialog-btns" id="goBackBtn">
+              <img class="btn-img" src="./img/arrowleft.png" alt="" />
             </button>`;
-  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button role="go-forwards-through-gallery" onclick="goForth(${counterindex})" class="DialogBtns" id="goForthBtn">
-              <img class="BtnImg" src="./img/arrowright.png" alt="" />
+  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button role="go-forwards-through-gallery" onclick="goForth(${counterindex})" class="dialog-btns" id="goForthBtn">
+              <img class="btn-img" src="./img/arrowright.png" alt="" />
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[counterindex]}</p>`;
   DIALOG_IMG_COUNTER_CONTAINER_REF.innerHTML = `<p>${counterindex + 1} /12</p>`;
@@ -89,8 +89,8 @@ function goBack() {
     ACTUAL_IMG_INDEX--;
   }
   DIALOG_IMG_BIG_REF.innerHTML = "";
-  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="ImgBigStyling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
-  BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack()" class="DialogBtns" id="goBackBtn">
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="img-big-styling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
+  BACK_BTN_CONTAINER_REF.innerHTML = `  <button onclick="goBack()" class="dialog-btns" id="goBackBtn">
               <img src="./img/arrowleft.png" alt="" />
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
@@ -108,8 +108,8 @@ function goForth() {
     ACTUAL_IMG_INDEX++;
   }
   DIALOG_IMG_BIG_REF.innerHTML = "";
-  DIALOG_IMG_BIG_REF.innerHTML = `<div class="ContainerImgBig"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="ImgBigStyling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
-  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth()" class="DialogBtns" id="goForthBtn">
+  DIALOG_IMG_BIG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${ACTUAL_IMG_INDEX}" class="img-big-styling" src="${GALLERY[ACTUAL_IMG_INDEX]}"></div>`;
+  FORTH_BTN_CONTAINER_REF.innerHTML = ` <button onclick="goForth()" class="dialog-btns" id="goForthBtn">
               <img src="./img/arrowright.png" alt="" />
             </button>`;
   DIALOG_IMG_NAME_REF.innerHTML = `<p>${GALLERY_NAMES[ACTUAL_IMG_INDEX]}</p>`;
